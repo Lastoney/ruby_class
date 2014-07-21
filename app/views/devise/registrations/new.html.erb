@@ -1,20 +1,92 @@
-<h2>Sign up</h2>
+
+<html>
+  
+  <head>
+    
+<title></title>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+
+
+
+  </head>
+  <body>
+  
+  <div class="row ">  <div class="span12  footerback"> </div></div>
+  <div class="row blueback">  <div class="span4 left strong"><%= image_tag("banner.jpg" ,         :size=>"340*150" , :crop => :fill )%> </div><div class="span8 ftsize ">YOUR TALENT IS EVERY ONE'S PRIDE</div></div>
+  
+<div class="row headcolor">
+<div class="span4 "></div>
+<div class="span4 size"><%= render "devise/shared/links" %></div>
+<div class="span4"></div>
+</div>
+
+     <div class="row background">
+     <div class="span4"></div>
+     <div class="span4 alignright">
+      
+
+      </div>
+
+     <div class="span4 ">
+        
+     <h3>Sign up from here</h3>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+  <br>
+  <%= f.text_field :firstname, :placeholder => "First name" %>
 
+  <br>
+  <%= f.text_field :Lastname, :placeholder => "Last name" %>
+<br>
+
+  <%= f.text_field :Gender, :placeholder =>"Gender" %>
+<br>
   
+  <%= f.text_field :Marital_status, :placeholder =>"Marital status"%>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  <br>
+  <%= f.text_field :Phone_number, :placeholder =>"Phone number" %>
+<br>
+  
+  <%= f.text_field :Date_of_birth, :placeholder =>"Date of birth" %>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <br>
+  <%= f.text_field :Country, :placeholder =>"Country" %>
 
-  <div><%= f.submit "Sign up" %></div>
+<br>
+  <%= f.text_field :Town, :placeholder =>"Town" %>
+
+  <br>
+  <%= f.text_field :Street_name, :placeholder =>"Street name" %>
+ 
+
+
+  <br>
+  <%= f.email_field :email, :placeholder =>"Email" %>
+
+
+  <br>
+    <%= f.password_field :password, :placeholder =>"Password"  %>
+<br>
+  
+    <%= f.password_field :password_confirmation, :placeholder =>"Confirm password" %>
+    <br>
+
+  <%= f.submit "Sign up" %>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+
+
+ 
+     </div></div>
+
+
+    <div class="row"><div class="span12 footerback"></div></div>
+    
+
+  </body>
+</html>
