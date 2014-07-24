@@ -8,6 +8,6 @@ class HomeController < ApplicationController
        
   end
 
-  def new 
+  def clientlist
   end 
 end

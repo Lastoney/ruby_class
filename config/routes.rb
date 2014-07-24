@@ -6,6 +6,7 @@ TalentShow::Application.routes.draw do
 
    resources :blogs
    root :to => 'home#index'
+   get 'home/clientlist'
   # get 'talaupdates/edit'
 
   controller :sessions do
@@ -16,6 +17,12 @@ end
 
   # The priority is based upon order of creation:
   # first create -> highest priority.
+
+devise_for :users, :skip => [:registrations]                                          
+    as :user do
+      get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
+      patch 'users/:id' => 'devise/registrations#update', :as => 'user_registration'            
+    end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

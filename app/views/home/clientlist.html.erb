@@ -1,0 +1,92 @@
+
+<html>
+  
+  <head>
+    
+<title></title>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+
+
+
+  </head>
+  <body>
+  
+  <div class="row ">  <div class="span12  footerback"> </div></div>
+  <div class="row blueback">  <div class="span4 left strong"><%= image_tag("banner.jpg" ,         :size=>"340*150" , :crop => :fill )%> </div><div class="span8 ftsize">YOUR TALENT IS EVERY ONE'S PRIDE</div></div>
+  
+<div class="row headcolor">
+<div class="span4 "></div>
+
+<div class="span4"></div>
+</div>
+
+     <div class="row background">
+     <div class="span4"></div>
+     <div class="span4 alignright">
+      
+
+      </div>
+
+     <div class="span4 ">
+        
+     <h3>Sign up from here</h3>
+
+<%= form_for(resource, as: resource_name, url: edit_user_registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <br>
+  <%= f.text_field :firstname, :placeholder => "First name" %>
+
+  <br>
+  <%= f.text_field :Lastname, :placeholder => "Last name" %>
+<br>
+
+  <%= f.text_field :Gender, :placeholder =>"Gender" %>
+<br>
+  
+  <%= f.text_field :Marital_status, :placeholder =>"Marital status"%>
+
+  <br>
+  <%= f.text_field :Phone_number, :placeholder =>"Phone number" %>
+<br>
+  
+  <%= f.text_field :Date_of_birth, :placeholder =>"Date of birth" %>
+
+  <br>
+  <%= f.text_field :Country, :placeholder =>"Country" %>
+
+<br>
+  <%= f.text_field :Town, :placeholder =>"Town" %>
+
+  <br>
+  <%= f.text_field :Street_name, :placeholder =>"Street name" %>
+ 
+
+
+  <br>
+  <%= f.email_field :email, :placeholder =>"Email" %>
+
+
+  <br>
+    <%= f.password_field :password, :placeholder =>"Password"  %>
+<br>
+  
+    <%= f.password_field :password_confirmation, :placeholder =>"Confirm password" %>
+    <br>
+
+  <%= f.submit "Update" %>
+<% end %>
+
+
+
+
+ 
+     </div></div>
+
+
+    <div class="row"><div class="span12 footerback"></div></div>
+    
+
+  </body>
+</html>

@@ -14,13 +14,13 @@
 	<div class="row ">  <div class="span12  footerback"> </div></div>
 	<div class="row blueback">  <div class="span4 left strong"><%= image_tag("banner.jpg" ,         :size=>"340*150" , :crop => :fill )%></div><div class="span8 ftsize ">YOUR TALENT IS EVERY ONE'S PRIDE</div></div>
 	
-<div class="row"><div class="span12 headcolor"></div></div>
+<div class="row"><div class="span12 headcolor"><%=link_to 'List', home_clientlist_path %>    </div></div>
      <div class="row background">
      <div class="span4"></div>
      <div class="span4 alignright">
      It's <%= Time.now %>
 We have <%= pluralize(@User, "users" ) %>.
-
+     <%= link_to "Change your password", edit_user_registration_path %>
     
      <% if user_signed_in? %>
           <%= link_to 'Sign Out', destroy_user_session_path, :method  =>:delete %>
