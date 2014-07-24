@@ -8,9 +8,10 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'devise'
 gem 'therubyracer'
-#gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
+#gem 'rails_admin'
+#gem 'cancan'
 
 
 # Gems used only for assets and not required

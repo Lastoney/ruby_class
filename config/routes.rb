@@ -1,11 +1,21 @@
 TalentShow::Application.routes.draw do
+  resources :talaupdates
+
+
   devise_for :users
 
    resources :blogs
    root :to => 'home#index'
+  # get 'talaupdates/edit'
+
+  controller :sessions do
+get 'login' => :new
+post 'login' => :create
+delete 'logout' => :destroy
+end
 
   # The priority is based upon order of creation:
-  # first created -> highest priority.
+  # first create -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

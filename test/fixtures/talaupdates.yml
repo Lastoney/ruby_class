@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  talent: MyString
+  Delete: MyString
+  Talent: MyText
+  image_url: MyString
+  Edit: MyString
+  talent: MyString
+
+two:
+  talent: MyString
+  Delete: MyString
+  Talent: MyText
+  image_url: MyString
+  Edit: MyString
+  talent: MyString

@@ -1,7 +1,53 @@
+<html>
+	
+	<head>
+		
+<title></title>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css.css">
 
-<h1>Go home riht now</h1>
-<h2>Why not boost your talent</h2>
 
 
+	</head>
+	<body >
+	
+	<div class="row ">  <div class="span12  footerback"> </div></div>
+	<div class="row blueback">  <div class="span4 left strong"><%= image_tag("banner.jpg" ,         :size=>"340*150" , :crop => :fill )%></div><div class="span8 ftsize ">YOUR TALENT IS EVERY ONE'S PRIDE</div></div>
+	
+<div class="row"><div class="span12 headcolor"></div></div>
+     <div class="row background">
+     <div class="span4"></div>
+     <div class="span4 alignright">
+     It's <%= Time.now %>
+We have <%= pluralize(@User, "users" ) %>.
+
+    
+     <% if user_signed_in? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, :method  =>:delete %>
+     <% end %>
+
+     	</div>
+
+     <div class="span4 ">
+     
+         <table><tr><th>First name</th><th>Last name</th></tr> 
+     <%- for n in @userview  %>
+         
+          
+           
+           <tr><td><%=  n.firstname %></td><td><%=  n.Lastname %></td></tr>
+
+           
+            <%- end %>
+</table>
+            
+
+ 
+     </div></div>
 
 
+		<div class="row"><div class="span12 footerback"></div></div>
+		
+
+	</body>
+</html>
